@@ -1,0 +1,669 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fondo oscuro para contraste */
+    color: #ffffff;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin-top: 150px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    background-color: transparent; 
+}
+
+#acerca-de, #portafolio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px; 
+}
+
+#contacto div {
+    flex: 1;
+    text-align: center;
+}
+
+#contacto h4 {
+    font-size: 1.1rem;
+    color: #623500;
+}
+
+#contacto p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#quienes-somos {
+    padding-top: 150px;
+}
+
+#quienes-somos h2 {
+    margin-top: 50px;
+}
+
+/* Estilo del menú de navegación */
+nav {
+    background-color: #c16300; /* Marrón */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 15px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #623500; /* Marrón oscuro al pasar el cursor */
+    text-decoration: underline;
+}
+
+/* Encabezado principal */
+header {
+    width: 100%;
+    height: 650px;
+    background: #ffffff;
+    background: -webkit-linear-gradient(to right, hsl(32, 100%, 19%), hsl(32, 80%, 36%));
+    background: linear-gradient(to right, #613400, #a56112);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 100;
+}
+
+/* Texto en el header */
+.textos-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.textos-header h1 {
+    font-size: 90px;
+    color: #fff;
+    font-family: "Impact", sans-serif;
+    font-weight: 100;
+}
+
+.textos-header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+nav a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.contenedor{
+    padding: 150px 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.titulo {
+    color: #623500;
+    font-size: 47px;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: -30px; 
+}
+
+.titulo2 {
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 60px; /* Reduce el margen superior */
+    margin-bottom: 30px; /* Reduce el margen inferior */
+    position: relative; /* Asegura que esté en su lugar */
+    z-index: 10; /* Asegura que el título esté por encima de otros elementos */
+}
+
+header .navbar ul{
+  list-style: none;
+}
+
+header .navbar ul li{
+   position: relative;
+   float: left;
+}
+
+header .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color:#ffffff;
+    display: block;
+}
+
+header .navbar ul li a:hover{
+    text-decoration: underline;
+    background-color: #f37e10;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #98601E;
+    display: none;
+}
+
+header .navbar ul li ul li{
+   width: 100%;
+   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul ,
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*height: 170px; /* Ajusta la altura según el tamaño de la ola */
+    z-index: 10; /* Asegúrate de que esté por encima del contenido */
+}
+
+/* About us */
+
+main .sobre-nosotros {
+    padding: 30px 0 60px 0; /* Espaciado superior e inferior */
+}
+
+.contenedor-sobre-nosotros {
+    display: flex; /* Crea un diseño en fila */
+    justify-content: space-evenly; /* Espacia los elementos de manera uniforme */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-top: 70px;
+}
+
+.imagen-about-us {
+    width: 1750%; /* Agranda la imagen al 60% del ancho del contenedor */
+    max-width: 1000px; /* Tamaño máximo para evitar que se agrande demasiado */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+    align-self: flex-start; /* Mantiene la imagen alineada al lado izquierdo */
+    margin-left: -800px;
+}
+
+.sobre-nosotros .contenido-textos {
+    width: 35%; /* Reduce el ancho del texto para dar más espacio a la imagen */
+    margin-left: 20px; /* Asegura un espacio entre la imagen y el texto */
+    margin-top: 70px;
+}
+
+.contenido-textos h3 {
+    margin-bottom: 15px; /* Espaciado inferior de los encabezados */
+    font-size: 21px; /* Aumenta el tamaño de los títulos */
+}
+
+.contenido-textos h3, .contenido-textos p {
+    color: #000000; /* Color del texto */
+    margin-left: -170px
+}
+
+.contenido-textos p {
+    margin-bottom: 20px; /* Espacio adicional debajo de los párrafos */
+    font-size: 17px; /* Aumenta el tamaño de los párrafos */
+    line-height: 1.6; /* Mejora la legibilidad ajustando el espaciado entre líneas */
+}
+
+.contenido-textos h3:nth-of-type(2) {
+    margin-top: 30px; /* Espacio adicional específicamente antes del segundo título */
+}
+
+.contenido-textos h3 span {
+    background: #623500; /* Fondo marrón */
+    color: #fff; /* Texto blanco */
+    border-radius: 50%; /* Crea un círculo */
+    display: inline-block; /* Hace que el elemento ocupe el espacio justo */
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 30px; /* Ancho del círculo */
+    height: 30px; /* Altura del círculo */
+    padding: 2px; /* Relleno interno */
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5); /* Sombra alrededor */
+    margin-right: 5px; /* Espaciado a la derecha */
+}
+
+/* Galeria */
+
+
+.portafolio{
+    background: #623500;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: -100px;
+    margin-top: 100px;
+}
+
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(26, 84%, 45%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/* Clients */
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card{
+    background: rgb(173, 92, 0);
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.tituloBienvenidos{
+    color: #623500;
+    font-size: 47px;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: -480px; 
+    margin-left: 340px;
+}
+
+.enlace-pdf {
+    color: blue;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    padding-left: 105px;
+    
+}
+
+.about-services{
+    background: #623500;
+    padding-bottom: 30px;
+    padding: 5px 0 10px 0;
+    font-size: 15px;
+    color: #c8ad73;
+    border-bottom: 2px solid #98601E;
+    top: 6000px;
+}
+
+.titulo2{
+    color: #98601E;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+.titulo3{
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.subtitulo {
+    margin-top: 10px; /* Ajusta este valor según la distancia que necesites */
+    font-size: 15px; /* Puedes ajustar el tamaño del texto */
+    color: #C16300; /* Cambia el color según tu diseño */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-top: 14px;
+}
+
+.tituloportfolio{
+    margin-top: -100px;
+    color: #ffffff;
+    font-size: 47px;
+    text-align: center;
+}
+
+.about-services2 {
+    text-align: center; /* Centra el contenido */
+    padding: 20px;
+}
+
+.contenedorApp {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    margin-top: -10px; /* Disminuye el valor para subir el contenedor */
+}
+
+.servicio-cont {
+    display: flex; /* Muestra los elementos en línea */
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: -80px
+}
+
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.servicio-ind img{
+    width: 90%;
+}
+
+.subtitulo2{
+    color: #ffffff;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* footer */
+
+footer {
+    background: linear-gradient(to bottom, hsla(32, 80%, 36%), hsla(32, 100%, 19%)); /* Gradiente principal */
+    padding: 20px 0; /* Espacio vertical reducido */
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50px; /* Aumenta este valor para moverlo más abajo */
+    min-height: auto; /* Se ajusta al contenido */
+    height: auto; /* Quita cualquier altura fija */
+}
+
+.contenedor-footer {
+    display: flex;
+    flex-direction: row; /* Elementos en fila */
+    justify-content: space-around; /* Espaciado uniforme */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Ajuste automático en pantallas pequeñas */
+    text-align: center;
+    color: #fff !important; /* Aseguramos que el texto sea blanco */
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: bold;
+    padding: 50px 20px; /* Espaciado interno */
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 80%; /* Ancho ajustable */
+    min-height: 300px; /* Ajusta la altura mínima del contenedor */
+    background: none; /* Sin fondo adicional */
+    box-shadow: none; /* Sin sombras */
+    border: none; /* Sin bordes */
+    padding-top: 0px; /* Aumenta este valor para moverlo más abajo */
+    padding-bottom: 30px; /* Ajusta si necesitas más espacio inferior */
+}
+
+/* Estilos para las líneas marrones (opcional) */
+footer::before, footer::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #ffffff; /* Línea marrón */
+    position: absolute;
+}
+
+footer::before {
+    top: 0; /* Línea en la parte superior */
+}
+
+footer::after {
+    bottom: 0; /* Línea en la parte inferior */
+}
+
+/* Estilo para las secciones del contenido */
+.content-foo-1, .content-foo-2, .content-foo-3 {
+    margin: 20px; /* Separación entre las secciones */
+    flex: 1; /* Las secciones ocupan el mismo espacio */
+}
+
+.content-foo-1 h4, 
+.content-foo-2 h4, 
+.content-foo-3 h4, 
+.content-foo-1 p, 
+.content-foo-2 p, 
+.content-foo-3 p {
+    color: #fff !important; /* Textos blancos dentro de cada sección */
+    font-weight: bold;
+    margin: 10px 0; /* Espaciado interno */
+}
+
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 44%;
+    }
+
+    /* Clientes */
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card{
+        width: 90%;
+    }
+
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+
+    /* servicios */
+
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio-ind{
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
+
+    .servicio-ind img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    /* ABOUT US */
+
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    /* Clients */
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+        height: 900px;
+        margin-top: -8000px;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: #ffffff;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+}
